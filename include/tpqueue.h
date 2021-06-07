@@ -13,12 +13,12 @@ class TPQueue {
    int count;
    public:
    TPQueue():
-    size(100),
-    begin(0), end(0), count(0) {
-    arr = new T[size + 1];
+   size(100),
+   begin(0), end(0), count(0) {
+      arr = new T[size + 1];
    }
    ~TPQueue() {
-    delete[] arr;
+      delete[] arr;
    }
    void push(const T &);
    T pop();
