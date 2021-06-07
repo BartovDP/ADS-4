@@ -6,25 +6,25 @@
 template<typename T>
 class TPQueue {
    private:
-  T *arr;
-  int size;
-  int begin,
-    end;
-  int count;
- public:
-  TPQueue():
+   T *arr;
+   int size;
+   int begin,
+   end;
+   int count;
+   public:
+   TPQueue():
     size(100),
     begin(0), end(0), count(0) {
     arr = new T[size + 1];
-  }
-  ~TPQueue() {
+   }
+   ~TPQueue() {
     delete[] arr;
-  }
-  void push(const T &);
-  T pop();
-  T get() const;
-  bool isEmpty() const;
-  bool isFull() const;
+   }
+   void push(const T &);
+   T pop();
+   T get() const;
+   bool isEmpty() const;
+   bool isFull() const;
 };
 
 template<typename T>
@@ -72,7 +72,7 @@ bool TPQueue<T>::isEmpty() const {
 template<typename T>
 bool TPQueue<T>::isFull() const {
   return count == size;
-};
+}
 
 struct SYM {
   char ch;
