@@ -5,26 +5,26 @@
 
 template<typename T>
 class TPQueue {
-   private:
-   T *arr;
-   int size;
-   int begin,
-   end;
-   int count;
-   public:
-   TPQueue():
-   size(100),
-   begin(0), end(0), count(0) {
-      arr = new T[size + 1];
-   }
-   ~TPQueue() {
-      delete[] arr;
-   }
-   void push(const T &);
-   T pop();
-   T get() const;
-   bool isEmpty() const;
-   bool isFull() const;
+private:
+T *arr;
+int size;
+int begin,
+end;
+int count;
+public:
+TPQueue():
+size(100),
+begin(0), end(0), count(0) {
+arr = new T[size + 1];
+}
+~TPQueue() {
+delete[] arr;
+}
+void push(const T &);
+T pop();
+T get() const;
+bool isEmpty() const;
+bool isFull() const;
 };
 
 template<typename T>
